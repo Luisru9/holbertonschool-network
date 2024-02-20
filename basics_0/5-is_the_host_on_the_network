@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Check if an argument is provided
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 <IP address>"
+    exit 1
+fi
+
+# Extract the IP address from the argument
+ip_address=$1
+
+# Ping the IP address
+ping -c 4 $ip_address
