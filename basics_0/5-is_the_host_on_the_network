@@ -1,7 +1,12 @@
+```bash
 #!/bin/bash
 
+# Check if no arguments are passed
 if [ $# -eq 0 ]; then
+    # Display usage message
     echo "Usage: $0 {IP_ADDRESS}"
 else
+    # Ping the specified IP address five times
     ping -c 5 "$1"
 fi
+```
